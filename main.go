@@ -15,12 +15,19 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"os"
 
 	"github.com/prometheus/common/promslog"
 
 	"github.com/Securepoint/unbound-exporter/exporter"
 	"github.com/Securepoint/unbound-exporter/metrics"
+)
+
+var (
+	version = "dev"
+	commit  = "none"
+	date    = "unknown"
 )
 
 func main() {
@@ -37,7 +44,7 @@ func main() {
 	)
 	flag.Parse()
 
-	log.Info("Starting unbound_exporter")
+	log.Info(fmt.Sprintf("Starting unbound_exporter %s (commit: %s, date: %s)", version, commit, date))
 	exp, err := exporter.NewUnboundExporter(*unboundHost, *unboundCa, *unboundCert, *unboundKey, log)
 	if err != nil {
 		log.Error("Unbound Exporter setup failed", "err", err.Error())
