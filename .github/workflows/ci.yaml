@@ -22,3 +22,5 @@ jobs:
         with:
           go-version-file: go.mod
         id: go
+      - name: Run tests
+        run: go test -v ./...
