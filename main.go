@@ -19,8 +19,8 @@ import (
 
 	"github.com/prometheus/common/promslog"
 
-	"github.com/letsencrypt/unbound_exporter/exporter"
-	"github.com/letsencrypt/unbound_exporter/metrics"
+	"github.com/Securepoint/unbound-exporter/exporter"
+	"github.com/Securepoint/unbound-exporter/metrics"
 )
 
 func main() {

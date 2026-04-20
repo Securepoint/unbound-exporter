@@ -1,6 +1,6 @@
-module github.com/letsencrypt/unbound_exporter
+module github.com/Securepoint/unbound-exporter
 
-go 1.24.0
+go 1.26.2
 
 require (
 	github.com/prometheus/client_golang v1.23.2

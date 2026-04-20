@@ -9,7 +9,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus/collectors/version"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
-	"github.com/letsencrypt/unbound_exporter/exporter"
+	"github.com/Securepoint/unbound-exporter/exporter"
 )
 
 const homePageTemplate string = `
